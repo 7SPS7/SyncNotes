@@ -11,7 +11,7 @@ import Footer from './Footer';
 const router = createBrowserRouter(
 [
   {
-    path: "/",
+    path: "/SyncNotes/",
     element: 
     <div>
       <Navbar/>
@@ -21,7 +21,7 @@ const router = createBrowserRouter(
     </div>
   },
   {
-    path:"/update/:id",
+    path:"/SyncNotes/update/:id",
     element: 
     <div>
       <Navbar/>
@@ -30,7 +30,7 @@ const router = createBrowserRouter(
     </div>
   },
   {
-    path: "/pastes",
+    path: "/SyncNotes/pastes",
     element: 
     <div>
       <Navbar/>
@@ -39,7 +39,7 @@ const router = createBrowserRouter(
     </div>
   },
   {
-    path: "/pastes/:id",
+    path: "/SyncNotes/pastes/:id",
     element: 
     <div>
       <Navbar/>
