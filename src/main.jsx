@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import { Toaster } from 'react-hot-toast'
 
 createRoot(document.getElementById('root')).render(
-  <HashRouter>
+  <HashRouter basename="/SyncNotes/">
     <Provider store={store}>
       <App />
       <Toaster/>
