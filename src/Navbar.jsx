@@ -7,7 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/SyncNotes/', { state: { scrollToNotes: true } }); // Navigate to Home
+    navigate('/', { state: { scrollToNotes: true } }); // Navigate to Home
   };
 
   return (
@@ -23,7 +23,7 @@ const Navbar = () => {
         <ul className="hidden md:flex gap-8 text-lg items-center">
           <li>
             <NavLink
-              to={"/SyncNotes/"}
+              to={"/"}
               className={({ isActive }) =>
                 `cursor-pointer hover:text-gray-300 ${
                   isActive ? "border-b-2 border-white pb-1" : ""
@@ -35,7 +35,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to={"/SyncNotes/pastes"}
+              to={"/pastes"}
               className={({ isActive }) =>
                 `cursor-pointer hover:text-gray-300 ${
                   isActive ? "border-b-2 border-white pb-1" : ""
@@ -66,10 +66,10 @@ const Navbar = () => {
         <div className="md:hidden text-white py-4 px-6">
           <ul className="flex flex-col gap-6 text-lg">
             <li>
-              <NavLink to={"/SyncNotes/"}>Home</NavLink>
+              <NavLink to={"/"}>Home</NavLink>
             </li>
             <li>
-              <NavLink to={"/SyncNotes/pastes"}>All Notes</NavLink>
+              <NavLink to={"/pastes"}>All Notes</NavLink>
             </li>
             <li>
               <button onClick={handleClick}>Create New Note</button>

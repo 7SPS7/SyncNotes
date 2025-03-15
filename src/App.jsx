@@ -2,15 +2,15 @@ import './App.css'
 import Home from './Home';
 import Navbar from './Navbar';
 import Paste from './Paste';
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import { createHashRouter, RouterProvider, Navigate } from 'react-router-dom';
 import View from './View';
 import Frontpage from './Frontpage';
 import Update from './Update';
 import Footer from './Footer';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "/SyncNotes/",
+    path: "/",
     element: (
       <div>
         <Navbar />
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: "/SyncNotes/update/:id",
+    path: "/update/:id",
     element: (
       <div>
         <Navbar />
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: "/SyncNotes/pastes",
+    path: "/pastes",
     element: (
       <div>
         <Navbar />
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: "/SyncNotes/pastes/:id",
+    path: "/pastes/:id",
     element: (
       <div>
         <Navbar />
@@ -50,11 +50,10 @@ const router = createBrowserRouter([
       </div>
     )
   },
-  // Redirect from "/" to "/SyncNotes/"
   {
-    path: "/",
-    element: <Navigate to="/SyncNotes/" />
-  }
+    path: "*",
+    element: <Navigate to="/" />
+  },
 ]);
 
 function App() {
