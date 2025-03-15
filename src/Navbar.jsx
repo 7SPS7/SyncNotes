@@ -7,7 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/', { state: { scrollToNotes: true } }); // Navigate to Home
+    navigate('/SyncNotes/', { state: { scrollToNotes: true } }); // Navigate to Home
   };
 
   return (
@@ -22,8 +22,8 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-lg items-center">
           <li>
-            <a
-              to={"/"}
+            <NavLink
+              to={"/SyncNotes/"}
               className={({ isActive }) =>
                 `cursor-pointer hover:text-gray-300 ${
                   isActive ? "border-b-2 border-white pb-1" : ""
@@ -31,11 +31,11 @@ const Navbar = () => {
               }
             >
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              to={"/pastes"}
+            <NavLink
+              to={"/SyncNotes/pastes"}
               className={({ isActive }) =>
                 `cursor-pointer hover:text-gray-300 ${
                   isActive ? "border-b-2 border-white pb-1" : ""
@@ -43,7 +43,7 @@ const Navbar = () => {
               }
             >
               All Notes
-            </a>
+            </NavLink>
           </li>
           <li>
             <button onClick={handleClick} className="hover:text-gray-300">
@@ -66,10 +66,10 @@ const Navbar = () => {
         <div className="md:hidden text-white py-4 px-6">
           <ul className="flex flex-col gap-6 text-lg">
             <li>
-              <a to={"/"}>Home</a>
+              <NavLink to={"/SyncNotes/"}>Home</NavLink>
             </li>
             <li>
-              <a to={"/pastes"}>All Notes</a>
+              <NavLink to={"/SyncNotes/pastes"}>All Notes</NavLink>
             </li>
             <li>
               <button onClick={handleClick}>Create New Note</button>
