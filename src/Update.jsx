@@ -30,7 +30,7 @@ const Update = () => {
         dispatch(updateToPastes(updatedPaste));
 
         // Redirect to "/pastes" after updating
-        navigate('/pastes');
+        navigate('/SyncNotes/pastes');
     }
 
     return (
