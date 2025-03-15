@@ -8,7 +8,7 @@ const Frontpage = () => {
   const navigate = useNavigate(); // Initialize navigation function
 
   const handleClick = () => {
-    navigate('/', { state: { scrollToNotes: true } }); // Pass state to Home
+    navigate('/SyncNotes/', { state: { scrollToNotes: true } }); // Pass state to Home
   };
 
   return (
