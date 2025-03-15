@@ -22,7 +22,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-lg items-center">
           <li>
-            <NavLink
+            <a
               to={"/"}
               className={({ isActive }) =>
                 `cursor-pointer hover:text-gray-300 ${
@@ -31,10 +31,10 @@ const Navbar = () => {
               }
             >
               Home
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink
+            <a
               to={"/pastes"}
               className={({ isActive }) =>
                 `cursor-pointer hover:text-gray-300 ${
@@ -43,7 +43,7 @@ const Navbar = () => {
               }
             >
               All Notes
-            </NavLink>
+            </a>
           </li>
           <li>
             <button onClick={handleClick} className="hover:text-gray-300">
@@ -66,10 +66,10 @@ const Navbar = () => {
         <div className="md:hidden text-white py-4 px-6">
           <ul className="flex flex-col gap-6 text-lg">
             <li>
-              <NavLink to={"/"}>Home</NavLink>
+              <a to={"/"}>Home</a>
             </li>
             <li>
-              <NavLink to={"/pastes"}>All Notes</NavLink>
+              <a to={"/pastes"}>All Notes</a>
             </li>
             <li>
               <button onClick={handleClick}>Create New Note</button>
