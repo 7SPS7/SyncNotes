@@ -55,12 +55,12 @@ const Paste = () => {
                 {paste.title}
                 <div className="mt-5 mb-5 flex items-center justify-end gap-2 flex-wrap">
                   <button className="text-sm">
-                    <NavLink to={`/pastes/${paste?._id}`}>
+                    <NavLink to={`/SyncNotes/pastes/${paste?._id}`}>
                       <FaRegEye />
                     </NavLink>
                   </button>
                   <button className="text-sm">
-                    <NavLink to={`/update/${paste?._id}`}>
+                    <NavLink to={`/SyncNotes/update/${paste?._id}`}>
                       <MdEdit />
                     </NavLink>
                   </button>
